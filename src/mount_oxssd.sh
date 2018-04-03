@@ -3,3 +3,6 @@ sudo fdisk /dev/mydevice
 sudo mkfs.ext4 /dev/mydevice
 sudo mount /dev/mydevice /mnt/test
 sudo chown mengcz /mnt/test
+
+sudo mount /dev/sdb /mnt/data
+sudo chown mengcz /mnt/data
