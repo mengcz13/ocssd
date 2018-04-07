@@ -30,4 +30,6 @@ sudo kill -2 $BLKTRACE_PID
 SVGNAME="md-real-io_$N.svg"
 iowatcher -t "$TRACEDIR/$TRACEFILE.blktrace" -o "$TRACEDIR/$SVGNAME"
 
+blkparse -i "$TRACEDIR/$TRACEFILE.blktrace.dump" -o "$TRACEDIR/trace.txt"
+
 # rm -rf "$MD_OUTPUT_DIR"
