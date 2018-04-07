@@ -1,6 +1,7 @@
 N=$1
 RESDIR=$2
 FILESIZE=$3
+DEVICE_NAME=$4
 BENCH=md-real-io
 M=1000
 MD_OUTPUT_DIR="/mnt/test/out"
@@ -16,7 +17,7 @@ fi
 mkdir -p "$TRACEDIR"
 
 TRACEFILE="md-real-io"
-sudo blktrace -d /dev/mydevice -o "$TRACEFILE" -D "$TRACEDIR" &
+sudo blktrace -d /dev/$DEVICE_NAME -o "$TRACEFILE" -D "$TRACEDIR" &
 BLKTRACE_PID=$!
 
 FILE="$TRACEDIR/run_md-real-io.log"
